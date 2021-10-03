@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import Home from './component/home/Home';
+import { GITHUB_GRAPH_QL_DATA } from './constants';
 
 function App() {
+  //Create a github client to fetch repo data
+  const client = new ApolloClient({
+    cache: new InMemoryCache(),
+    uri: GITHUB_GRAPH_QL_DATA.GITHUB_GRAPH_QL_API,
+    headers: {
+      authorization: GITHUB_GRAPH_QL_DATA.TOKEN,
+    }
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // The Apollo Provider send all fetch data to All components 
+    <ApolloProvider client={client}>
+      <div className="App">
+        <Home />
+      </div>
+    </ApolloProvider>
   );
 }
 
