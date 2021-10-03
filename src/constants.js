@@ -26,11 +26,6 @@ import { css } from "@emotion/react";
    }
  `;
 
-export const GITHUB_GRAPH_QL_DATA={
-TOKEN:'Bearer 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', //The token can be only used for Reading public data in Github.
-GITHUB_GRAPH_QL_API:'https://api.github.com/graphql', // The Github graph ql api
-};
-
  export const loaderCss=css`
  position: absolute;
  top: 50%;

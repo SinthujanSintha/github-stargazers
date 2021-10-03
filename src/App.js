@@ -1,7 +1,7 @@
 import './App.css';
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import Home from './component/home/Home';
-import { GITHUB_GRAPH_QL_DATA } from './constants';
+import { GITHUB_GRAPH_QL_DATA } from './config';
 
 function App() {
   //Create a github client to fetch repo data
