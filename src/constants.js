@@ -26,6 +26,11 @@ import { css } from "@emotion/react";
    }
  `;
 
+ export const GITHUB_GRAPH_QL_DATA={
+  TOKEN:`Bearer <Please put your GitHub access token here>`, //The token 
+  API_URL:'https://api.github.com/graphql', // The Github graph ql api
+  
+  };
  export const loaderCss=css`
  position: absolute;
  top: 50%;

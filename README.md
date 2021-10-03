@@ -12,7 +12,8 @@
 ## To Run This App
 ### 1. Clone the repo by using this [link](https://github.com/SinthujanSintha/github-stargazers.git).
 ### 2. Once cloned the repo type in the terminal  ```yarn install```  to install all dependcies.
-### 3. Then type ``` yarn start``` to start the app.
+### 3 Replace the ```Github Acces Token``` inside the this file ```src/constants.js``` with yours. view this [Link](https://www.zoho.com/catalyst/help/tutorials/githubbot/generate-access-token.html) for How to create your Github Token.
+### 4. Then type ``` yarn start``` to start the app.
 ### Some sample snaps of this app.
 <br>
 

@@ -1,13 +1,13 @@
 import './App.css';
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import Home from './component/home/Home';
-import { GITHUB_GRAPH_QL_DATA } from './config';
+import {GITHUB_GRAPH_QL_DATA} from './constants'
 
 function App() {
   //Create a github client to fetch repo data
   const client = new ApolloClient({
     cache: new InMemoryCache(),
-    uri: GITHUB_GRAPH_QL_DATA.GITHUB_GRAPH_QL_API,
+    uri:  GITHUB_GRAPH_QL_DATA.API_URL,
     headers: {
       authorization: GITHUB_GRAPH_QL_DATA.TOKEN,
     }
