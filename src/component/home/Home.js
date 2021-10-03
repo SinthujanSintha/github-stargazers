@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Home.css"
+import "./Home.css";
 import { useQuery } from '@apollo/client';
 import RepoCard from '../repoCard/RepoCard';
 import { PacmanLoader } from 'react-spinners';
@@ -12,7 +12,6 @@ const Home = () => {
   const listRepo = data && data.search.edges && data.search.edges.map(({ node }, key) => {
     const { repositoryName, repositoryOwner, repositoryDescription, numberOfStars, numberOfIssues, pushedAt } = node;
     return (
-
       //Parse the each repo data to RepoCard component
       <div key={key}>
         <RepoCard repositoryName={repositoryName}
